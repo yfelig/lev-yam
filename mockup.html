@@ -7,7 +7,7 @@
 <meta name="description" content="מבנה דייגים עתיק על חוף כמעט מבודד. עזרו לנו להקים מרחב עבודה יחיד במינו על שפת הים.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -22,13 +22,13 @@
   --text:      #1A3C5E;
   --muted:     #5D7A8A;
   --border:    #D6EAF8;
-  --radius:    18px;
+  --radius:    8px;
   --shadow:    0 8px 32px rgba(26,82,118,.12);
 }
 
 html { scroll-behavior: smooth; }
 body {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Frank Ruhl Libre', sans-serif;
   background: var(--white);
   color: var(--text);
   line-height: 1.6;
@@ -51,17 +51,17 @@ nav {
 .nav-cta {
   background: var(--orange);
   color: white;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Frank Ruhl Libre', sans-serif;
   font-weight: 700;
   font-size: .9rem;
-  border: none;
-  padding: .55rem 1.4rem;
-  border-radius: 50px;
+  border: 2px solid var(--orange);
+  padding: .5rem 1.3rem;
+  border-radius: 0;
   cursor: pointer;
   text-decoration: none;
-  transition: background .2s, transform .15s;
+  transition: background .2s, color .2s;
 }
-.nav-cta:hover { background: #e0861f; transform: translateY(-1px); }
+.nav-cta:hover { background: transparent; color: var(--orange); }
 
 /* ── HERO ──────────────────────────────────────────── */
 .hero {
@@ -118,33 +118,34 @@ nav {
 .hero-actions { margin-top: 2.5rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 .btn-primary {
   display: inline-block;
-  padding: .95rem 2.6rem;
+  padding: .85rem 2.4rem;
   background: var(--orange);
   color: white;
   font-size: 1.05rem;
   font-weight: 700;
-  border-radius: 50px;
+  border-radius: 0;
   text-decoration: none;
-  border: none; cursor: pointer;
-  transition: transform .2s, box-shadow .2s, background .2s;
-  box-shadow: 0 6px 24px rgba(245,149,42,.4);
-  font-family: 'Rubik', sans-serif;
+  border: 2px solid var(--orange);
+  cursor: pointer;
+  transition: background .2s, color .2s, border-color .2s;
+  font-family: 'Frank Ruhl Libre', sans-serif;
+  letter-spacing: .3px;
 }
-.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(245,149,42,.5); background: #e0861f; }
+.btn-primary:hover { background: transparent; color: var(--orange); }
 .btn-outline {
   display: inline-block;
-  padding: .95rem 2.2rem;
+  padding: .85rem 2.2rem;
   background: transparent;
   color: white;
   font-size: 1.05rem;
-  font-weight: 600;
-  border-radius: 50px;
+  font-weight: 500;
+  border-radius: 0;
   text-decoration: none;
-  border: 2px solid rgba(255,255,255,.55);
-  transition: border-color .2s, background .2s;
-  font-family: 'Rubik', sans-serif;
+  border: 2px solid rgba(255,255,255,.6);
+  transition: border-color .2s, color .2s;
+  font-family: 'Frank Ruhl Libre', sans-serif;
 }
-.btn-outline:hover { border-color: white; background: rgba(255,255,255,.1); }
+.btn-outline:hover { border-color: white; color: white; }
 
 /* Wave divider top */
 .wave-divider { line-height: 0; }
@@ -158,14 +159,14 @@ nav {
 }
 .progress-band .label-chip {
   display: inline-block;
-  background: rgba(245,149,42,.15);
+  background: transparent;
   color: var(--orange);
-  font-size: .75rem;
+  font-size: .7rem;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   text-transform: uppercase;
-  padding: .35rem .9rem;
-  border-radius: 50px;
+  padding: .25rem 0;
+  border-bottom: 2px solid var(--orange);
   margin-bottom: 1.25rem;
 }
 .progress-band h2 {
@@ -198,7 +199,7 @@ nav {
 
 .prog-track {
   background: rgba(255,255,255,.12);
-  border-radius: 50px;
+  border-radius: 4px;
   height: 16px;
   max-width: 680px;
   margin: 0 auto .75rem;
@@ -206,7 +207,7 @@ nav {
 }
 .prog-fill {
   height: 100%;
-  border-radius: 50px;
+  border-radius: 4px;
   background: linear-gradient(90deg, var(--blue), var(--orange));
   width: 0%;
   transition: width 1.8s cubic-bezier(.25,.8,.25,1);
@@ -240,15 +241,15 @@ nav {
 }
 .label-chip {
   display: inline-block;
-  background: var(--orange-lt);
+  background: transparent;
   color: var(--orange);
-  font-size: .75rem;
+  font-size: .7rem;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   text-transform: uppercase;
-  padding: .35rem .9rem;
-  border-radius: 50px;
-  margin-bottom: .75rem;
+  padding: .25rem 0;
+  border-bottom: 2px solid var(--orange);
+  margin-bottom: .9rem;
 }
 .section-h {
   font-size: clamp(1.8rem, 4vw, 2.6rem);
@@ -300,14 +301,15 @@ nav {
 .tier-card.popular:hover { border-color: var(--orange); box-shadow: 0 16px 40px rgba(245,149,42,.3); }
 .popular-badge {
   position: absolute;
-  top: -14px; left: 50%;
+  top: -13px; left: 50%;
   transform: translateX(-50%);
   background: var(--orange);
   color: white;
-  font-size: .72rem;
+  font-size: .68rem;
   font-weight: 700;
-  padding: .3rem 1rem;
-  border-radius: 50px;
+  letter-spacing: 1.5px;
+  padding: .28rem .9rem;
+  border-radius: 0;
   white-space: nowrap;
 }
 .tier-icon { font-size: 2rem; margin-bottom: .75rem; }
@@ -328,17 +330,17 @@ nav {
 .tier-perks li::before { content: '✓'; color: var(--blue); font-weight: 700; flex-shrink: 0; }
 .tier-card.popular .tier-perks li::before { color: var(--orange); }
 .tier-btn {
-  width: 100%; padding: .85rem;
+  width: 100%; padding: .8rem;
   background: var(--blue); color: white;
-  border: none; border-radius: 50px;
-  font-family: 'Rubik', sans-serif;
+  border: 2px solid var(--blue); border-radius: 0;
+  font-family: 'Frank Ruhl Libre', sans-serif;
   font-size: .95rem; font-weight: 700;
   cursor: pointer;
-  transition: background .2s, transform .15s;
+  transition: background .2s, color .2s;
 }
-.tier-btn:hover { background: var(--blue-dk); transform: scale(1.02); }
-.tier-card.popular .tier-btn { background: var(--orange); }
-.tier-card.popular .tier-btn:hover { background: #e0861f; }
+.tier-btn:hover { background: transparent; color: var(--blue); }
+.tier-card.popular .tier-btn { background: var(--orange); border-color: var(--orange); }
+.tier-card.popular .tier-btn:hover { background: transparent; color: var(--orange); }
 
 /* ── GALLERY ─────────────────────────────────────────── */
 .gallery-section { background: var(--blue-nav); padding: 4rem 0; overflow: hidden; }
@@ -472,8 +474,8 @@ footer a:hover { color: var(--orange); }
 .modal input {
   width: 100%; padding: .75rem 1rem;
   border: 1.5px solid var(--border);
-  border-radius: 10px;
-  font-family: 'Rubik', sans-serif; font-size: 1rem;
+  border-radius: 4px;
+  font-family: 'Frank Ruhl Libre', sans-serif; font-size: 1rem;
   margin-bottom: 1rem; color: var(--text);
   background: var(--blue-lt); outline: none;
   direction: rtl; transition: border-color .2s;
@@ -482,14 +484,14 @@ footer a:hover { color: var(--orange); }
 .modal-submit {
   width: 100%; padding: 1rem;
   background: var(--orange); color: white;
-  border: none; border-radius: 50px;
-  font-family: 'Rubik', sans-serif;
+  border: 2px solid var(--orange); border-radius: 0;
+  font-family: 'Frank Ruhl Libre', sans-serif;
   font-size: 1.1rem; font-weight: 700;
-  cursor: pointer; transition: background .2s;
+  cursor: pointer; transition: background .2s, color .2s;
   margin-top: .5rem;
 }
-.modal-submit:hover { background: #e0861f; }
-.modal-submit:disabled { background: #aaa; cursor: not-allowed; }
+.modal-submit:hover { background: transparent; color: var(--orange); }
+.modal-submit:disabled { background: #ccc; border-color: #ccc; color: #888; cursor: not-allowed; }
 .modal-error { color: #c0392b; font-size: .9rem; margin-top: .75rem; text-align: center; }
 
 /* ── TOAST ────────────────────────────────────────────── */
@@ -497,7 +499,7 @@ footer a:hover { color: var(--orange); }
   position: fixed; bottom: 2rem; left: 50%;
   transform: translateX(-50%) translateY(100px);
   background: var(--blue-dk); color: white;
-  padding: 1rem 2rem; border-radius: 50px;
+  padding: 1rem 2rem; border-radius: 4px;
   font-size: 1rem; font-weight: 500;
   box-shadow: var(--shadow);
   z-index: 200;
