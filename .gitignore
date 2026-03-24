@@ -1,0 +1,4 @@
+# PHP server files (not needed for GitHub Pages demo)
+levyam-webhook.log
+levyam-data.json
+.DS_Store
